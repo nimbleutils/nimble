@@ -1,3 +1,3 @@
 # nimble
 
-Nimble styling
+Nimble styling.
