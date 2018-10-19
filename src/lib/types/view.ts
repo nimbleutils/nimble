@@ -6,7 +6,7 @@ export interface ViewProps {
   mr?: number,
   ml?: number,
   f?: number,
-  dir?: FlexDirectionType,
+  dir?: FlexDirectionProp,
   style?: ViewStyle,
   theme: any,
 }
@@ -19,7 +19,7 @@ export type ViewStyleProp =
   | 'flex'
   | 'flexDirection'
 
-export type FlexDirectionType =
+export type FlexDirectionProp =
   | 'row'
   | 'column'
   | 'row-reverse'
