@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { View as OView, StyleSheet } from 'react-native'
 import NimbleConsumer from './Consumer';
-import { ViewProps } from '../types/view';
+import { IViewProps } from '../types/view';
 import { propToStyleProp, utilityPropToThemeProp } from '../utils/maps';
 
-const View: React.SFC<ViewProps> = ({
+const View: React.SFC<IViewProps> = ({
   children,
   style,
   theme,

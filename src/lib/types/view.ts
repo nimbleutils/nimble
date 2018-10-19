@@ -1,17 +1,17 @@
 import { ViewStyle } from 'react-native'
 
-export interface ViewProps {
+export interface IViewProps {
   mt?: number,
   mb?: number,
   mr?: number,
   ml?: number,
   f?: number,
-  dir?: FlexDirectionProp,
+  dir?: IFlexDirectionProp,
   style?: ViewStyle,
   theme: any,
 }
 
-export type ViewStyleProp =
+export type IViewStyleProp =
   | 'marginRight'
   | 'marginLeft'
   | 'marginTop'
@@ -19,7 +19,7 @@ export type ViewStyleProp =
   | 'flex'
   | 'flexDirection'
 
-export type FlexDirectionProp =
+export type IFlexDirectionProp =
   | 'row'
   | 'column'
   | 'row-reverse'
