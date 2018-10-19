@@ -1,6 +1,6 @@
-import { ViewStyleProp } from "../types/view";
+import { IViewStyleProp } from "../types/view";
 
-export const propToStyleProp = new Map<string, ViewStyleProp>([
+export const propToStyleProp = new Map<string, IViewStyleProp>([
   ['mr', 'marginRight'],
   ['ml', 'marginLeft'],
   ['mt', 'marginTop'],
