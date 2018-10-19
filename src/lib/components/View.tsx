@@ -16,7 +16,8 @@ const View: React.SFC<ViewProps> = ({
   
   const utilityStyles = compatibleProps
     .reduce((acc, { key, value }) => {
-      const valueFromTheme = utilityPropToThemeProp.has(key) && theme[utilityPropToThemeProp.get(key)][value] || undefined
+      const valueFromTheme = utilityPropToThemeProp.has(key)
+        && theme[utilityPropToThemeProp.get(key)][value] || undefined
 
       return {
         ...acc,
