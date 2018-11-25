@@ -12,7 +12,7 @@ export const generalPropToStylePropMap = new Map<string, string>([
   ['pt', 'paddingTop'],
   ['pb', 'paddingBottom'],
   ['px', 'paddingHorizontal'],
-  ['py', 'paddingVertical']
+  ['py', 'paddingVertical'],
 ])
 
 export const utilityPropToThemeProp = new Map<string, string>([
@@ -29,5 +29,6 @@ export const utilityPropToThemeProp = new Map<string, string>([
   ['px', 'spacing'],
   ['py', 'spacing'],
   ['radius', 'radius'],
-  ['size', 'text.size']
+  ['size', 'text.size'],
+  ['family', 'text.family'],
 ])

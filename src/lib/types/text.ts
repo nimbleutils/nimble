@@ -15,6 +15,7 @@ export interface ITextProps extends IViewTextProps {
   textAlign?: TextAlignType
   font?: string
   spacing?: number
+  family?: string
   /**
    * Utlity props
    */

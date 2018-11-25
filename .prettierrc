@@ -7,5 +7,6 @@
   "javascript.format.enable": true,
   "prettier.disableLanguages": ["markdown"],
   "singleQuote": true,
-  "semi": false
+  "semi": false,
+  "trailingComma": "es5"
 }
