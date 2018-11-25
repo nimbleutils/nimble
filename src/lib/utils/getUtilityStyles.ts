@@ -1,4 +1,4 @@
-import { ViewStyle, TextStyle } from "react-native";
+import { ViewStyle, TextStyle } from 'react-native'
 
 export const getViewUtiityStyles = (props: any) => {
   let styles: ViewStyle = {}
@@ -11,7 +11,10 @@ export const getViewUtiityStyles = (props: any) => {
   return styles
 }
 
-export const getTextUtilityStyles = () => {
+export const getTextUtilityStyles = (props: any) => {
   let styles: TextStyle = {}
+
+  if (props.bold) styles.fontWeight = '700'
+
   return styles
 }

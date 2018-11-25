@@ -6,5 +6,6 @@
   "files.trimTrailingWhitespace": true,
   "javascript.format.enable": true,
   "prettier.disableLanguages": ["markdown"],
+  "singleQuote": true,
   "semi": false
 }

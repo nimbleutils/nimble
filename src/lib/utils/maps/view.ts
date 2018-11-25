@@ -18,6 +18,7 @@ export const viewPropToStylePropMap = new Map<string, string>([
   ['right', 'right'],
   ['bottom', 'bottom'],
   ['top', 'top'],
+  ['radius', 'borderRadius']
 ])
 
 export const viewPropToUtilityPropMap = new Set(['center'])

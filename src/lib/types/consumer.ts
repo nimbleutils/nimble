@@ -1,5 +1,5 @@
 export interface ITheme {
-  spacing: { [key: string]: string }
+  spacing: { [key: string]: number }
 }
 
 export interface IConsumerInjectedProps {
