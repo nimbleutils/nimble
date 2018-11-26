@@ -13,11 +13,12 @@ const getRegularStyles = (
   return compatibleProps.reduce((acc, { key, value }) => {
     const valueFromTheme =
       utilityPropToThemeProp.has(key) &&
+      get(theme, utilityPropToThemeProp.get(key)) &&
       get(theme, utilityPropToThemeProp.get(key))[value]
 
     return {
       ...acc,
-      [propToStylePropMap.get(key)]: valueFromTheme || value
+      [propToStylePropMap.get(key)]: valueFromTheme || value,
     }
   }, {})
 }

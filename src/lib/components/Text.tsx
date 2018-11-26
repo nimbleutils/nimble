@@ -8,7 +8,6 @@ import { getTextUtilityStyles } from '../utils/getUtilityStyles'
 import getRegularStyles from '../utils/getRegularStyles'
 import { ITextProps } from '../..'
 import getTextChildren from '../utils/getTextChildren'
-import getTextStyles from '../utils/getTextStyles'
 
 const Text: React.SFC<ITextProps & IConsumerInjectedProps> = ({
   children,
@@ -18,18 +17,16 @@ const Text: React.SFC<ITextProps & IConsumerInjectedProps> = ({
 }) => {
   const propToStylePropMap = new Map([
     ...textPropToStylePropMap,
-    ...generalPropToStylePropMap
+    ...generalPropToStylePropMap,
   ])
-  const textSpecificStyles = getTextStyles(rest, theme)
   const regularStyles = getRegularStyles(rest, propToStylePropMap, theme)
-  const utilityStyles = getTextUtilityStyles(rest)
+  const utilityStyles = getTextUtilityStyles(rest, theme)
   const appliedStyle = StyleSheet.create({
     style: {
-      ...textSpecificStyles,
       ...regularStyles,
       ...style,
-      ...utilityStyles
-    }
+      ...utilityStyles,
+    },
   })
 
   return (

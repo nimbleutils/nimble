@@ -48,4 +48,5 @@ export interface IViewProps extends IViewTextProps {
    * Utilites
    */
   center?: boolean
+  elevation?: number
 }

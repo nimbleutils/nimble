@@ -6,6 +6,7 @@ export const generalPropToStylePropMap = new Map<string, string>([
   ['mb', 'marginBottom'],
   ['mx', 'marginHorizontal'],
   ['my', 'marginVertical'],
+  ['m', 'margin'],
   /* Padding */
   ['pr', 'paddingRight'],
   ['pl', 'paddingLeft'],
@@ -13,6 +14,7 @@ export const generalPropToStylePropMap = new Map<string, string>([
   ['pb', 'paddingBottom'],
   ['px', 'paddingHorizontal'],
   ['py', 'paddingVertical'],
+  ['p', 'padding'],
 ])
 
 export const utilityPropToThemeProp = new Map<string, string>([
@@ -22,13 +24,17 @@ export const utilityPropToThemeProp = new Map<string, string>([
   ['mb', 'spacing'],
   ['mx', 'spacing'],
   ['my', 'spacing'],
+  ['m', 'spacing'],
   ['pr', 'spacing'],
   ['pl', 'spacing'],
   ['pt', 'spacing'],
   ['pb', 'spacing'],
   ['px', 'spacing'],
   ['py', 'spacing'],
+  ['p', 'spacing'],
   ['radius', 'radius'],
   ['size', 'text.size'],
   ['family', 'text.family'],
+  ['bg', 'colors'],
+  ['color', 'colors'],
 ])

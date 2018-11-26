@@ -16,6 +16,7 @@ export interface ITextProps extends IViewTextProps {
   font?: string
   spacing?: number
   family?: string
+  o?: number
   /**
    * Utlity props
    */
