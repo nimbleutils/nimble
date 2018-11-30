@@ -1,25 +1,26 @@
 import * as React from 'react'
-import { View as OView, StyleSheet } from 'react-native'
-import { IViewProps } from '../types/view'
-import { viewPropToStylePropMap } from '../utils/maps/view'
+import { Text as OText, StyleSheet } from 'react-native'
+import { textPropToStylePropMap } from '../utils/maps/text'
 import NimbleConsumer from './Consumer'
 import { IConsumerInjectedProps } from '../types/consumer'
 import { generalPropToStylePropMap } from '../utils/maps/general'
-import { getViewUtiityStyles } from '../utils/getUtilityStyles'
+import { getTextUtilityStyles } from '../utils/getUtilityStyles'
 import getRegularStyles from '../utils/getRegularStyles'
+import { ITextProps } from '../..'
+import getTextChildren from '../utils/getTextChildren'
 
-const View: React.SFC<IViewProps & IConsumerInjectedProps> = ({
+const Text: React.SFC<ITextProps & IConsumerInjectedProps> = ({
   children,
   style,
   theme,
   ...rest
 }) => {
   const propToStylePropMap = new Map([
-    ...viewPropToStylePropMap,
+    ...textPropToStylePropMap,
     ...generalPropToStylePropMap,
   ])
   const regularStyles = getRegularStyles(rest, propToStylePropMap, theme)
-  const utilityStyles = getViewUtiityStyles(rest)
+  const utilityStyles = getTextUtilityStyles(rest, theme)
   const appliedStyle = StyleSheet.create({
     style: {
       ...regularStyles,
@@ -28,7 +29,11 @@ const View: React.SFC<IViewProps & IConsumerInjectedProps> = ({
     },
   })
 
-  return <OView style={appliedStyle.style}>{children}</OView>
+  return (
+    <OText style={appliedStyle.style}>
+      {getTextChildren(rest, children as string)}
+    </OText>
+  )
 }
 
-export default NimbleConsumer(View)
+export default NimbleConsumer(Text)

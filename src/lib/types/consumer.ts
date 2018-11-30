@@ -1,5 +1,11 @@
 export interface ITheme {
-  spacing: { [key: string]: string }
+  spacing?: { [key: string]: number }
+  radius?: { [key: string]: number }
+  text?: {
+    size?: { [key: string]: number }
+    family?: { [key: string]: string }
+  }
+  colors?: { [key: string]: string }
 }
 
 export interface IConsumerInjectedProps {
