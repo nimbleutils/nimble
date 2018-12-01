@@ -16,8 +16,6 @@ export const getViewUtiityStyles = (props: any) => {
       ...styles,
       ...elevationMap[props.elevation],
     }
-
-    console.log({ styles })
   }
 
   return styles

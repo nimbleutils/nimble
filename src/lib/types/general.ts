@@ -1,4 +1,4 @@
-export interface IViewTextProps {
+export interface IGeneralProps {
   mt?: string | number
   mb?: string | number
   mr?: string | number

@@ -1,10 +1,9 @@
-import { IViewTextProps } from './general'
-import { TextStyle } from 'react-native'
+import { IGeneralProps } from './general'
+import { TextProps } from 'react-native'
 
 type TextAlignType = 'auto' | 'left' | 'right' | 'center' | 'justify'
 
-export interface ITextProps extends IViewTextProps {
-  style?: TextStyle
+export interface ITextProps extends IGeneralProps, TextProps {
   /**
    * Style props
    */

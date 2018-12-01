@@ -1,5 +1,5 @@
-import { IViewTextProps } from './general'
-import { ViewStyle } from 'react-native'
+import { IGeneralProps } from './general'
+import { ViewProps } from 'react-native'
 
 type IFlexDirectionProp = 'row' | 'column' | 'row-reverse' | 'column-reverse'
 
@@ -20,11 +20,10 @@ type IFlexAlignItemsProp =
 
 type IFlexWrapProp = 'wrap' | 'nowrap'
 
-export interface IViewProps extends IViewTextProps {
+export interface IViewProps extends IGeneralProps, ViewProps {
   /**
    * Style props
    */
-  style?: ViewStyle
   f?: number
   wrap?: IFlexWrapProp
   flexBasis?: number | string

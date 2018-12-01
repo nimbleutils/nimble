@@ -1,6 +1,6 @@
 import { ViewStyle } from 'react-native'
 
-export const viewPropToStylePropMap = new Map<string, string>([
+export const viewToStyleMap = new Map<string, string>([
   /* Flex props */
   ['f', 'flex'],
   ['flexBasis', 'flexBasis'],
