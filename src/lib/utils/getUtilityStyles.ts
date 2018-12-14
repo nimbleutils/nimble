@@ -28,7 +28,9 @@ export const getTextUtilityStyles = (props: any, theme: ITheme) => {
 
   const defaultFontSize = get(theme, 'text.size.default') || 12
   const defaultFontFamily = get(theme, 'text.family.default') || 'Arial'
+  const defaultColor = get(theme, 'text.color') || 'black'
 
+  if (!props.color) styles.color = defaultColor
   if (!props.size) styles.fontSize = defaultFontSize
   if (!props.family) styles.fontFamily = defaultFontFamily
 
