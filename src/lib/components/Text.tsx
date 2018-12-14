@@ -8,11 +8,12 @@ import { getTextUtilityStyles } from '../utils/getUtilityStyles'
 import getRegularStyles from '../utils/getRegularStyles'
 import { ITextProps } from '../..'
 import getTextChildren from '../utils/getTextChildren'
+import { flattenStyle } from '../utils/flattenStyle'
 
-const Text: React.SFC<ITextProps & IConsumerInjectedProps> = ({
+const Text: React.FunctionComponent<ITextProps & IConsumerInjectedProps> = ({
   children,
-  style,
   theme,
+  style,
   ...rest
 }) => {
   const propToStylePropMap = new Map([
@@ -24,16 +25,16 @@ const Text: React.SFC<ITextProps & IConsumerInjectedProps> = ({
   const appliedStyle = StyleSheet.create({
     style: {
       ...regularStyles,
-      ...style,
       ...utilityStyles,
+      ...flattenStyle(style),
     },
   })
 
   return (
-    <OText style={appliedStyle.style}>
+    <OText style={appliedStyle.style} {...rest}>
       {getTextChildren(rest, children as string)}
     </OText>
   )
 }
 
-export default NimbleConsumer(Text)
+export default NimbleConsumer<ITextProps>(Text)

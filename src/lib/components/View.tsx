@@ -1,21 +1,22 @@
 import * as React from 'react'
 import { View as OView, StyleSheet } from 'react-native'
 import { IViewProps } from '../types/view'
-import { viewPropToStylePropMap } from '../utils/maps/view'
+import { viewToStyleMap } from '../utils/maps/view'
 import NimbleConsumer from './Consumer'
 import { IConsumerInjectedProps } from '../types/consumer'
 import { generalPropToStylePropMap } from '../utils/maps/general'
 import { getViewUtiityStyles } from '../utils/getUtilityStyles'
 import getRegularStyles from '../utils/getRegularStyles'
+import { flattenStyle } from '../utils/flattenStyle'
 
-const View: React.SFC<IViewProps & IConsumerInjectedProps> = ({
+const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
   children,
-  style,
   theme,
+  style,
   ...rest
 }) => {
   const propToStylePropMap = new Map([
-    ...viewPropToStylePropMap,
+    ...viewToStyleMap,
     ...generalPropToStylePropMap,
   ])
   const regularStyles = getRegularStyles(rest, propToStylePropMap, theme)
@@ -23,12 +24,16 @@ const View: React.SFC<IViewProps & IConsumerInjectedProps> = ({
   const appliedStyle = StyleSheet.create({
     style: {
       ...regularStyles,
-      ...style,
       ...utilityStyles,
+      ...flattenStyle(style),
     },
   })
 
-  return <OView style={appliedStyle.style}>{children}</OView>
+  return (
+    <OView style={appliedStyle.style} {...rest}>
+      {children}
+    </OView>
+  )
 }
 
-export default NimbleConsumer(View)
+export default NimbleConsumer<IViewProps>(View)
