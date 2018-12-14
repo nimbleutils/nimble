@@ -11,7 +11,7 @@ export const getViewUtiityStyles = (props: any) => {
     styles.alignItems = 'center'
   }
 
-  if (props.elevation && elevationMap[props.elevation]) {
+  if (elevationMap[props.elevation]) {
     styles = {
       ...styles,
       ...elevationMap[props.elevation],
