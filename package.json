@@ -2,7 +2,6 @@
   "name": "nimble-styling",
   "devDependencies": {
     "@types/color": "^3.0.0",
-    "@types/lodash": "4.17.11",
     "@types/react": "16.7.7",
     "@types/react-native": "0.57.4",
     "npm-run-all": "^4.1.3",
@@ -18,7 +17,7 @@
   },
   "version": "0.0.1",
   "main": "build/index.js",
-  "repository": "git@github.com:goa-codebet/nimble.git",
+  "repository": "https://github.com/goa-codebet/nimble-utils",
   "author": "<mtnptrsn@gmail.com>",
   "license": "MIT",
   "scripts": {
