@@ -1,9 +1,8 @@
 import { ViewStyle, TextStyle } from 'react-native'
 import { ITheme } from '../..'
 import { get } from 'lodash'
-import { elevationMap } from './maps/view'
 
-export const getViewUtiityStyles = (props: any) => {
+export const getViewUtiityStyles = (props: any, theme: ITheme) => {
   let styles: ViewStyle = {}
 
   if (props.center) {
@@ -11,10 +10,10 @@ export const getViewUtiityStyles = (props: any) => {
     styles.alignItems = 'center'
   }
 
-  if (elevationMap[props.elevation]) {
+  if (props.elevation && theme.elevation[props.elevation]) {
     styles = {
       ...styles,
-      ...elevationMap[props.elevation],
+      ...theme.elevation[props.elevation],
     }
   }
 

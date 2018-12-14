@@ -47,5 +47,5 @@ export interface IViewProps extends IGeneralProps, ViewProps {
    * Utilites
    */
   center?: boolean
-  elevation?: number
+  elevation?: string
 }
