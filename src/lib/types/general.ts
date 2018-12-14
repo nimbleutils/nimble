@@ -1,18 +1,16 @@
-import { ITheme } from "./consumer"
-
-export type SpaceType = keyof ITheme["spacing"] | number
-
-export interface IViewTextProps {
-  mt?: SpaceType
-  mb?: SpaceType
-  mr?: SpaceType
-  ml?: SpaceType
-  my?: SpaceType
-  mx?: SpaceType
-  pt?: SpaceType
-  pb?: SpaceType
-  pl?: SpaceType
-  pr?: SpaceType
-  px?: SpaceType
-  py?: SpaceType
+export interface IGeneralProps {
+  mt?: string | number
+  mb?: string | number
+  mr?: string | number
+  ml?: string | number
+  my?: string | number
+  mx?: string | number
+  m?: string | number
+  pt?: string | number
+  pb?: string | number
+  pl?: string | number
+  pr?: string | number
+  px?: string | number
+  py?: string | number
+  p?: string | number
 }

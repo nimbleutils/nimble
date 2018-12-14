@@ -6,4 +6,6 @@ export const textPropToStylePropMap = new Map<string, string>([
   ['textAlign', 'textAlign'],
   ['font', 'fontFamily'],
   ['spacing', 'letterSpacing'],
+  ['family', 'fontFamily'],
+  ['o', 'opacity'],
 ])

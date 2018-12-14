@@ -1,26 +1,27 @@
 import * as React from 'react'
-import { View as OView, StyleSheet } from 'react-native'
-import { IViewProps } from '../types/view'
-import { viewToStyleMap } from '../utils/maps/view'
+import { Text as OText, StyleSheet } from 'react-native'
+import { textPropToStylePropMap } from '../utils/maps/text'
 import NimbleConsumer from './Consumer'
 import { IConsumerInjectedProps } from '../types/consumer'
 import { generalPropToStylePropMap } from '../utils/maps/general'
-import { getViewUtiityStyles } from '../utils/getUtilityStyles'
+import { getTextUtilityStyles } from '../utils/getUtilityStyles'
 import getRegularStyles from '../utils/getRegularStyles'
+import { ITextProps } from '../..'
+import getTextChildren from '../utils/getTextChildren'
 import { flattenStyle } from '../utils/flattenStyle'
 
-const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
+const Text: React.FunctionComponent<ITextProps & IConsumerInjectedProps> = ({
   children,
   theme,
   style,
   ...rest
 }) => {
   const propToStylePropMap = new Map([
-    ...viewToStyleMap,
+    ...textPropToStylePropMap,
     ...generalPropToStylePropMap,
   ])
   const regularStyles = getRegularStyles(rest, propToStylePropMap, theme)
-  const utilityStyles = getViewUtiityStyles(rest)
+  const utilityStyles = getTextUtilityStyles(rest, theme)
   const appliedStyle = StyleSheet.create({
     style: {
       ...regularStyles,
@@ -30,10 +31,10 @@ const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
   })
 
   return (
-    <OView style={appliedStyle.style} {...rest}>
-      {children}
-    </OView>
+    <OText style={appliedStyle.style} {...rest}>
+      {getTextChildren(rest, children as string)}
+    </OText>
   )
 }
 
-export default NimbleConsumer<IViewProps>(View)
+export default NimbleConsumer<ITextProps>(Text)
