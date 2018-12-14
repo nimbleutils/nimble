@@ -6,6 +6,7 @@ export interface ITheme {
     family?: { [key: string]: string }
   }
   colors?: { [key: string]: string }
+  classes?: { [key: string]: { [key: string]: any } }
 }
 
 export interface IConsumerInjectedProps {
