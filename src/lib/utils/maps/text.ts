@@ -8,4 +8,5 @@ export const textPropToStylePropMap = new Map<string, string>([
   ['spacing', 'letterSpacing'],
   ['family', 'fontFamily'],
   ['o', 'opacity'],
+  ['deco', 'textDecorationLine'],
 ])

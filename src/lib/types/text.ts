@@ -22,4 +22,5 @@ export interface ITextProps extends IGeneralProps, TextProps {
   uppercase?: boolean
   capitalize?: boolean
   bold?: boolean
+  deco?: 'underline' | 'none' | 'through' | 'underline-through'
 }

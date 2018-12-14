@@ -4,6 +4,7 @@ const capitalize = (s: string) => {
 }
 
 const getTextChildren = (props: any, text: string) => {
+  if (props.lowercase) text = text.toLowerCase()
   if (props.uppercase) text = text.toUpperCase()
   if (props.capitalize) text = capitalize(text)
   return text
