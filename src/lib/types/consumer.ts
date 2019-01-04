@@ -1,3 +1,5 @@
+import { ViewStyle, TextStyle } from 'react-native'
+
 export interface ITheme {
   spacing?: { [key: string]: number }
   radius?: { [key: string]: number }
@@ -6,7 +8,7 @@ export interface ITheme {
     family?: { [key: string]: string }
   }
   colors?: { [key: string]: string }
-  classes?: { [key: string]: { [key: string]: any } }
+  classes?: { [key: string]: ViewStyle & TextStyle }
 }
 
 export interface IConsumerInjectedProps {
