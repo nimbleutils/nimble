@@ -11,13 +11,12 @@ export const getViewUtiityStyles = (props: any) => {
     styles.alignItems = 'center'
   }
 
-  if (props.absoluteFill)
-    [
-      (styles = {
-        ...styles,
-        ...StyleSheet.absoluteFillObject,
-      }),
-    ]
+  if (props.absoluteFill) {
+    styles = {
+      ...styles,
+      ...StyleSheet.absoluteFillObject,
+    }
+  }
 
   if (elevationMap[props.elevation]) {
     styles = {
