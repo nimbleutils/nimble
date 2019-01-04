@@ -25,6 +25,7 @@ export const getTextUtilityStyles = (props: any, theme: ITheme) => {
   let styles: TextStyle = {}
 
   if (props.bold) styles.fontWeight = '700'
+  if (props.thin) styles.fontWeight = '300'
 
   const defaultFontSize = get(theme, 'text.size.default') || 12
   const defaultFontFamily = get(theme, 'text.family.default') || 'Arial'
