@@ -1,9 +1,10 @@
 import { IGeneralProps } from './general'
 import { TextProps } from 'react-native'
+import { TextDirectives } from './directives'
 
 type TextAlignType = 'auto' | 'left' | 'right' | 'center' | 'justify'
 
-export interface ITextProps extends IGeneralProps, TextProps {
+export interface ITextProps extends IGeneralProps, TextProps, TextDirectives {
   /**
    * Style props
    */

@@ -8,11 +8,13 @@ import { generalPropToStylePropMap } from '../utils/maps/general'
 import { getViewUtiityStyles } from '../utils/getUtilityStyles'
 import getRegularStyles from '../utils/getRegularStyles'
 import { flattenStyle } from '../utils/flattenStyle'
+import { ifDirective } from '../utils/directives'
 
 const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
   children,
   theme,
   style,
+  nIf,
   ...rest
 }) => {
   const propToStylePropMap = new Map([
@@ -29,11 +31,20 @@ const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
     },
   })
 
-  return (
+  const viewElement = () => (
     <OView style={appliedStyle.style} {...rest}>
       {children}
     </OView>
   )
+
+  // Go through all directives before render
+  const renderWithDirectives = () => {
+    let e = viewElement()
+    e = ifDirective(e, nIf)
+    return e
+  }
+
+  return renderWithDirectives()
 }
 
 export default NimbleConsumer<IViewProps>(View)
