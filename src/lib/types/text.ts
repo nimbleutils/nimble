@@ -14,7 +14,6 @@ export interface ITextProps extends IGeneralProps, TextProps {
   textAlign?: TextAlignType
   font?: string
   spacing?: number
-  family?: string
   o?: number
   /**
    * Utlity props
