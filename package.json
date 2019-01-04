@@ -1,5 +1,5 @@
 {
-  "name": "nimble-styling",
+  "name": "nimble-utils",
   "devDependencies": {
     "@types/color": "^3.0.0",
     "@types/lodash": "^4",
