@@ -1,4 +1,4 @@
-import { ViewStyle, TextStyle } from 'react-native'
+import { ViewStyle, TextStyle, StyleSheet } from 'react-native'
 import { ITheme } from '../..'
 import { get } from 'lodash'
 import { elevationMap } from './maps/view'
@@ -10,6 +10,14 @@ export const getViewUtiityStyles = (props: any) => {
     styles.justifyContent = 'center'
     styles.alignItems = 'center'
   }
+
+  if (props.absoluteFill)
+    [
+      (styles = {
+        ...styles,
+        ...StyleSheet.absoluteFillObject,
+      }),
+    ]
 
   if (elevationMap[props.elevation]) {
     styles = {
