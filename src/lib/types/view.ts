@@ -49,4 +49,5 @@ export interface IViewProps extends IGeneralProps, ViewProps {
    */
   center?: boolean
   elevation?: number
+  absoluteFill?: boolean
 }
