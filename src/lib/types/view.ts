@@ -42,6 +42,7 @@ export interface IViewProps extends IGeneralProps, ViewProps {
   bottom?: number
   top?: number
   radius?: number | string
+  position?: 'absolute' | 'relative'
 
   /**
    * Utilites
