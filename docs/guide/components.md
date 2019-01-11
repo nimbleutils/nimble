@@ -45,7 +45,7 @@ These are the props for the following components
 | spacing    | number                             | letter spacing |
 | o          | number                             | opacity        |
 
-#### Utility props on View
+#### Utility props on Text
 
 | Props      | Value   | Description                      |
 | ---------- | ------- | -------------------------------- |
