@@ -19,6 +19,7 @@ export interface ITextProps extends IGeneralProps, TextProps {
    * Utlity props
    */
   uppercase?: boolean
+  lowercase?: boolean
   capitalize?: boolean
   bold?: boolean
   thin?: boolean
