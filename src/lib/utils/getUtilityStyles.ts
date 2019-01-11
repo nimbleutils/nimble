@@ -46,6 +46,7 @@ export const getTextUtilityStyles = (props: any, theme: ITheme) => {
   if (!props.family) styles.fontFamily = defaultFontFamily
 
   if (props.bold) styles.fontWeight = '700'
+  if (props.thin) styles.fontWeight = '300'
 
   if (props.class && theme.classes) {
     styles = {
