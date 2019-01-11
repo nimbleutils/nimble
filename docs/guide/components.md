@@ -25,25 +25,30 @@ These are the props for the following components
 | top       | number                                                                  | top              |
 | radius    | number, string                                                          | border radius    |
 
-### Text
-
-| Props      | Value                              | Description                      |
-| ---------- | ---------------------------------- | -------------------------------- |
-| color      | string                             | color                            |
-| size       | string, number                     | font size                        |
-| weight     | string                             | font weight                      |
-| lineHeight | number                             | line height                      |
-| textAlign  | auto, left, right, center, justify | text align                       |
-| font       | string                             | font family                      |
-| spacing    | number                             | letter spacing                   |
-| o          | number                             | opacity                          |
-| uppercase  | boolean                            | make all letters uppercase       |
-| capitalize | boolean                            | make only first letter uppercase |
-| bold       | boolean                            | font weight set to 700           |
-
-### Utils
+#### Utility props on View
 
 | Props     | Value   | Description |
 | --------- | ------- | ----------- |
 | center    | boolean | margin      |
 | elevation | number  | marginTop   |
+
+### Text
+
+| Props      | Value                              | Description    |
+| ---------- | ---------------------------------- | -------------- |
+| color      | string                             | color          |
+| size       | string, number                     | font size      |
+| weight     | string                             | font weight    |
+| lineHeight | number                             | line height    |
+| textAlign  | auto, left, right, center, justify | text align     |
+| font       | string                             | font family    |
+| spacing    | number                             | letter spacing |
+| o          | number                             | opacity        |
+
+#### Utility props on View
+
+| Props      | Value   | Description                      |
+| ---------- | ------- | -------------------------------- |
+| uppercase  | boolean | make all letters uppercase       |
+| capitalize | boolean | make only first letter uppercase |
+| bold       | boolean | font weight set to 700           |
