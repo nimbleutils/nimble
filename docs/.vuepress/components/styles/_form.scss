@@ -1,0 +1,75 @@
+.form {
+
+    &__row {
+        $margin: 10px;
+
+        &:nth-of-type(1n + 2) {
+            margin-top: $margin * 2;
+        }
+
+        &--multiple {
+
+            @include iota-breakpoint(md) {
+                display: flex;
+            }
+
+            .form__item {
+                &:nth-of-type(1n + 2) {
+                    margin-top: $margin * 2;
+                }
+                
+                @include iota-breakpoint(md) {
+
+                    &:not(:first-of-type):not(:last-of-type) {
+                        margin-right: $margin;
+                        margin-left: $margin
+                    }
+                    
+                    &:first-child {
+                        margin-right: $margin;
+                        margin-left: 0px;
+                    }
+                    
+                    &:last-child {
+                        margin-right: 0px;
+                        margin-left: $margin;
+                    }
+
+                    &:nth-of-type(1n + 2) {
+                        margin-top: 0;
+                    }
+
+                }
+            }
+            
+        }
+
+        .form {
+            &__item {
+                
+            }
+        }
+        
+    }
+
+    &__item {
+        flex: 1;
+    }
+
+    &__error {
+        margin-top: 2px;
+        margin-left: 10px;
+
+        font-size: 14px;
+        color: map-get($iota-global-colors, red);
+    }
+
+
+    &__input {
+
+    }
+
+    &__textarea {
+        
+    }
+}

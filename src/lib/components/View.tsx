@@ -20,7 +20,7 @@ const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
     ...generalPropToStylePropMap,
   ])
   const regularStyles = getRegularStyles(rest, propToStylePropMap, theme)
-  const utilityStyles = getViewUtiityStyles(rest)
+  const utilityStyles = getViewUtiityStyles(rest, theme)
   const appliedStyle = StyleSheet.create({
     style: {
       ...regularStyles,
