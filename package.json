@@ -18,7 +18,7 @@
   },
   "version": "0.0.1",
   "main": "build/index.js",
-  "repository": "https://github.com/goa-codebet/nimble-utils",
+  "repository": "git@github.com:goa-codebet/nimble.git",
   "author": "<mtnptrsn@gmail.com>",
   "license": "MIT",
   "scripts": {

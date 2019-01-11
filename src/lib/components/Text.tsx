@@ -9,13 +9,12 @@ import getRegularStyles from '../utils/getRegularStyles'
 import { ITextProps } from '../..'
 import getTextChildren from '../utils/getTextChildren'
 import { flattenStyle } from '../utils/flattenStyle'
-import { ifDirective } from '../utils/directives'
+import { renderWithDirectives } from '../utils/directives'
 
 const Text: React.FunctionComponent<ITextProps & IConsumerInjectedProps> = ({
   children,
   theme,
   style,
-  nIf,
   ...rest
 }) => {
   const propToStylePropMap = new Map([
@@ -32,20 +31,13 @@ const Text: React.FunctionComponent<ITextProps & IConsumerInjectedProps> = ({
     },
   })
 
-  const textElement = () => (
+  const element = (
     <OText style={appliedStyle.style} {...rest}>
       {getTextChildren(rest, children as string)}
     </OText>
   )
 
-  // Go through all directives before render
-  const renderWithDirectives = () => {
-    let e = textElement()
-    e = ifDirective(e, nIf)
-    return e
-  }
-
-  return renderWithDirectives()
+  return renderWithDirectives(element, rest)
 }
 
 export default NimbleConsumer<ITextProps>(Text)
