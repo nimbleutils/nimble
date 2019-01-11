@@ -17,7 +17,7 @@ export const getViewUtiityStyles = (props: any, theme: ITheme) => {
     }
   }
 
-  if (props.elevation && theme.elevation[props.elevation]) {
+  if (props.elevation && get(theme, `elevation.${props.elevation}`)) {
     styles = {
       ...styles,
       ...theme.elevation[props.elevation],
