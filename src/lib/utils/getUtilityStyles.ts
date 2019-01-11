@@ -1,4 +1,4 @@
-import { ViewStyle, TextStyle } from 'react-native'
+import { ViewStyle, TextStyle, StyleSheet } from 'react-native'
 import { ITheme } from '../..'
 import { get } from 'lodash'
 
@@ -8,6 +8,13 @@ export const getViewUtiityStyles = (props: any, theme: ITheme) => {
   if (props.center) {
     styles.justifyContent = 'center'
     styles.alignItems = 'center'
+  }
+
+  if (props.absoluteFill) {
+    styles = {
+      ...styles,
+      ...StyleSheet.absoluteFillObject,
+    }
   }
 
   if (props.elevation && theme.elevation[props.elevation]) {
