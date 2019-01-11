@@ -1,21 +1,15 @@
 import * as React from 'react'
+import { IConsumerInjectedProps } from '../types/consumer'
+import getPopulatedTheme from '../utils/getPopulatedTheme'
 
 export const NimbleContext = React.createContext({})
 
-interface IProviderProps {
-  theme: {
-    spacing: {
-      xs: number,
-      default: number,
-      lg: number,
-      xl: number,
-    },
-  },
-}
-
-const NimbleProvider: React.SFC<IProviderProps> = ({ children, theme }) => (
-  <NimbleContext.Provider value={ theme }>
-    { children }
+const NimbleProvider: React.SFC<IConsumerInjectedProps> = ({
+  children,
+  theme,
+}) => (
+  <NimbleContext.Provider value={getPopulatedTheme(theme)}>
+    {children}
   </NimbleContext.Provider>
 )
 

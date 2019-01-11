@@ -1,22 +1,20 @@
-import * as React from 'react'
+import React, { PureComponent, ComponentType } from 'react'
 import { NimbleContext } from './Provider'
-import { ITheme } from '../types/consumer'
+import { ITheme, IConsumerInjectedProps } from '../types/consumer'
 
-interface IProps {
-  theme: ITheme,
-}
-
-const NimbleConsumer = (
-  <OuterProps extends object>(WrappedComponent: React.ComponentType<OuterProps & IProps>) =>
-    class extends React.PureComponent<OuterProps> {
-      render() {
-        return (
-          <NimbleContext.Consumer>
-            { (theme: ITheme) => <WrappedComponent { ...this.props } theme={ theme }  /> }
-          </NimbleContext.Consumer>
-        )
-      }
+const NimbleConsumer = <OuterProps extends object>(
+  WrappedComponent: React.ComponentType<IConsumerInjectedProps>
+): ComponentType<OuterProps> =>
+  class extends PureComponent<OuterProps> {
+    render() {
+      return (
+        <NimbleContext.Consumer>
+          {(theme: ITheme) => (
+            <WrappedComponent {...this.props} theme={theme} />
+          )}
+        </NimbleContext.Consumer>
+      )
     }
-  )
+  }
 
 export default NimbleConsumer

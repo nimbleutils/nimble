@@ -1,7 +1,12 @@
 {
-  "semi": false,
+  "editor.formatOnSave": true,
+  "tslint.packageManager": "yarn",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.format.enable": true,
+  "prettier.disableLanguages": ["markdown"],
   "singleQuote": true,
-  "trailingComma": "all",
-  "tabWidth": 2,
-  "useTabs": false
+  "semi": false,
+  "trailingComma": "es5"
 }

@@ -1,0 +1,40 @@
+export const generalPropToStylePropMap = new Map<string, string>([
+  /* Margin */
+  ['mr', 'marginRight'],
+  ['ml', 'marginLeft'],
+  ['mt', 'marginTop'],
+  ['mb', 'marginBottom'],
+  ['mx', 'marginHorizontal'],
+  ['my', 'marginVertical'],
+  ['m', 'margin'],
+  /* Padding */
+  ['pr', 'paddingRight'],
+  ['pl', 'paddingLeft'],
+  ['pt', 'paddingTop'],
+  ['pb', 'paddingBottom'],
+  ['px', 'paddingHorizontal'],
+  ['py', 'paddingVertical'],
+  ['p', 'padding'],
+])
+
+export const utilityPropToThemeProp = new Map<string, string>([
+  ['mr', 'spacing'],
+  ['ml', 'spacing'],
+  ['mt', 'spacing'],
+  ['mb', 'spacing'],
+  ['mx', 'spacing'],
+  ['my', 'spacing'],
+  ['m', 'spacing'],
+  ['pr', 'spacing'],
+  ['pl', 'spacing'],
+  ['pt', 'spacing'],
+  ['pb', 'spacing'],
+  ['px', 'spacing'],
+  ['py', 'spacing'],
+  ['p', 'spacing'],
+  ['radius', 'radius'],
+  ['size', 'text.size'],
+  ['family', 'text.family'],
+  ['bg', 'colors'],
+  ['color', 'colors'],
+])
