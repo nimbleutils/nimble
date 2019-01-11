@@ -24,19 +24,35 @@ export const getViewUtiityStyles = (props: any, theme: ITheme) => {
     }
   }
 
+  if (props.class && theme.classes) {
+    styles = {
+      ...styles,
+      ...theme.classes[props.class],
+    }
+  }
+
   return styles
 }
 
 export const getTextUtilityStyles = (props: any, theme: ITheme) => {
   let styles: TextStyle = {}
 
-  if (props.bold) styles.fontWeight = '700'
-
   const defaultFontSize = get(theme, 'text.size.default') || 12
   const defaultFontFamily = get(theme, 'text.family.default') || 'Arial'
+  const defaultColor = get(theme, 'text.color') || 'black'
 
+  if (!props.color) styles.color = defaultColor
   if (!props.size) styles.fontSize = defaultFontSize
   if (!props.family) styles.fontFamily = defaultFontFamily
+
+  if (props.bold) styles.fontWeight = '700'
+
+  if (props.class && theme.classes) {
+    styles = {
+      ...styles,
+      ...theme.classes[props.class],
+    }
+  }
 
   return styles
 }
