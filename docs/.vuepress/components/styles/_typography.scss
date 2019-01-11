@@ -1,0 +1,42 @@
+h1,
+.h1 {
+    @include iota-type(
+        (
+            null: 32px,
+            md: 40px,
+            lg: 48px,
+        )
+    );
+    font-weight: bold;
+}
+
+h2,
+.h2 {
+    @include iota-type(
+        (
+            null: 26px,
+            md: 32px,
+            lg: 36px,
+        )
+    );
+    font-weight: bold;
+    border: none;
+}
+
+h3,
+.h3 {
+    @include iota-type(
+        (
+            null: 22px,
+            md: 24px,
+            lg: 28px,
+        )
+    );
+    font-weight: bold;
+}
+
+h4,
+.h4 {
+    @include iota-type(18px);
+    font-weight: bold;
+}
