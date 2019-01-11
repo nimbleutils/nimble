@@ -1,6 +1,6 @@
 # Components
 
-These are the props for the following components
+These are the props for the components View and Text
 
 ### View
 
