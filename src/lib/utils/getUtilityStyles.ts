@@ -1,7 +1,6 @@
 import { ViewStyle, TextStyle, StyleSheet } from 'react-native'
 import { ITheme } from '../..'
 import { get } from 'lodash'
-import { elevationMap } from './maps/view'
 
 export const getViewUtiityStyles = (props: any, theme: ITheme) => {
   let styles: ViewStyle = {}
@@ -18,10 +17,10 @@ export const getViewUtiityStyles = (props: any, theme: ITheme) => {
     }
   }
 
-  if (elevationMap[props.elevation]) {
+  if (props.elevation && get(theme, `elevation.${props.elevation}`)) {
     styles = {
       ...styles,
-      ...elevationMap[props.elevation],
+      ...theme.elevation[props.elevation],
     }
   }
 
