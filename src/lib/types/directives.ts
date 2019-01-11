@@ -1,7 +1,3 @@
-export interface ViewDirectives {
-  nIf?: boolean
-}
-
-export interface TextDirectives {
+export interface IGeneralDirectives {
   nIf?: boolean
 }
