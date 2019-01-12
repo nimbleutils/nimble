@@ -9,6 +9,16 @@ export interface ITheme {
     family?: { [key: string]: string }
   }
   colors?: { [key: string]: string }
+  elevation?: {
+    [key: string]: {
+      shadowColor: string
+      shadowOpacity: number
+      shadowOffset: {
+        width: number
+        height: number
+      }
+    }
+  }
   classes?: { [key: string]: ViewStyle & TextStyle }
 }
 
