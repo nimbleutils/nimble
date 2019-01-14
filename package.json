@@ -5,19 +5,19 @@
     "@types/lodash": "^4",
     "@types/react": "^16.7.7",
     "@types/react-native": "^0.57.4",
-    "npm-run-all": "^4.1.3",
-    "onchange": "^5.1.0",
-    "react": "16.6.3",
-    "react-native": "0.57.4",
-    "typescript": "^3.1.6",
-    "yalc": "^1.0.0-pre.23",
-    "vuepress": "^0.14.1",
     "iotacss": "^1.6.0",
     "markdown-it": "^8.4.1",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-katex": "^2.0.3",
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0"
+    "npm-run-all": "^4.1.3",
+    "onchange": "^5.1.0",
+    "react": "16.6.3",
+    "react-native": "0.57.4",
+    "sass-loader": "^7.1.0",
+    "typescript": "^3.1.6",
+    "vuepress": "^0.14.1",
+    "yalc": "^1.0.0-pre.23"
   },
   "peerDependencies": {
     "react": ">=15",
@@ -39,6 +39,8 @@
   },
   "dependencies": {
     "color": "^3.1.0",
-    "lodash": "^4"
+    "highlight.js": "^9.13.1",
+    "lodash": "^4",
+    "vue-highlight.js": "^3.0.1"
   }
 }
