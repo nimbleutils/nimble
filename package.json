@@ -23,7 +23,7 @@
     "react": ">=15",
     "react-native": ">=0.50.0"
   },
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "build/index.js",
   "repository": "git@github.com:goa-codebet/nimble.git",
   "author": "<mtnptrsn@gmail.com>",
@@ -35,7 +35,8 @@
     "yalc-publish-after-file-change": "onchange 'build/**/*' -- yalc publish",
     "docs:clean": "rimraf dist/*",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "prepublish": "yarn build"
   },
   "dependencies": {
     "color": "^3.1.0",
