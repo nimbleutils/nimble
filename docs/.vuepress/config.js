@@ -8,12 +8,12 @@ module.exports = {
   themeConfig: {
     nav: [
       {text: 'Home', link: '/'},
-      {text: 'Guide', link: '/guide/'},
+      {text: 'Documentation', link: '/documentation/'},
       {text: 'News', link: '/news/'},
       {text: 'GitHub ⤴', link: 'https://github.com/goa-codebet/nimble-utils'},
     ],
     sidebar: {
-      '/guide/': genSidebarConfig ('Guide'),
+      '/documentation/': genSidebarConfig ('Documentation'),
     },
     lastUpdated: 'Last Updated',
   },
