@@ -40,3 +40,5 @@ const Post = () => (
 ## Underlying technologies
 
 ## Get started right away
+
+Do you want to try out give nimble-utils? Check out our [Getting Started Guide](/guide/getting-started.html).
