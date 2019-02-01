@@ -1,13 +1,41 @@
 # Introduction
 
-Get started quick with Nibmle-utils, the fast and easy way to style your components
-in React Native.
+Get started quick with nimble-utils, the fast and easy way to style your components in React Native.
 
-## What is Nimble-utils?
+## What is nimble-utils?
 
-sdfsadfsds
+## Why use nimble-utils?
 
-## Why use Nimble-utils?
+nimble-utils is performant, elegant and extremely easy to use.
+
+Take a look for yourself.
+
+```javascript
+/* Without nimble-utils */
+const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    paddingHorizontal: 24,
+    paddingBottom: 12,
+  },
+  text: {
+    fontWeight: 'bold',
+  },
+})
+
+const Post = () => (
+  <View style={styles.wrapper}>
+    <Text style={styles.text}>Hello world</Text>
+  </View>
+)
+
+/* With nimble-utils */
+const Post = () => (
+  <View f={1} px={24} pb={12}>
+    <Text bold>Hello world</Text>
+  </View>
+)
+```
 
 ## Underlying technologies
 
@@ -17,4 +45,4 @@ Nimble-utils is build with the help of the following packages:
 - [React Native](https://facebook.github.io/react-native/)
 - [Typescript](https://www.typescriptlang.org/)
 
-## Get started the right away
+## Get started right away

@@ -12,11 +12,7 @@ npm install nimble-utils --save
 
 ## 2. Create a theme file
 
-Generate a theme file by running:
-
-```bash
-node ./node_modules/nimble-utils/build/cli/generate.js
-```
+Create a theme file. [Click here](/guide/theme.html) for more information regarding structure and how the theme file works.
 
 ## 3. Wrap your app with NimbleProvider
 
