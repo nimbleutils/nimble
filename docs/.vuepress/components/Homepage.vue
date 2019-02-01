@@ -1,8 +1,8 @@
 <template>
   <main class="index">
     <section class="index__hero">
-      <div class="o-container u-flex">
-        <div class="index__hero-text">
+      <div class="o-container u-flex@lg">
+        <div class="index__hero-text u-mr-2@lg">
           <h1>React Native Nimble</h1>
           <h2
             class="h4 index__hero-text-byline"
@@ -20,8 +20,9 @@
           </div>
         </div>
 
-        <div class="index__hero-code">
-          <div class="code"></div>
+        <div class="index__hero-code u-mt-4 u-mt-none@lg">
+          <pre class="code" v-highlightjs="hero.yarn"><code class="plaintext"></code></pre>
+          <pre class="code u-mt-1" v-highlightjs="hero.code"><code class="html"></code></pre>
         </div>
       </div>
 
@@ -40,23 +41,26 @@
 
       <img class="index__section-one-background" role="presentation" src="/section-one-curve.svg">
     </section>
+
+    <section class="index__section index__section-two"></section>
   </main>
 </template>
 
 <script>
-import VueHighlightJS from 'vue-highlight.js'
-
 export default {
+  data() {
+    return {
+      hero: {
+        yarn: `> yarn add nimble-utils`,
+        code: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
+    <Text size=”large” bold uppercase>nimble is awesome!</Text>
+  </Box>`,
+      },
+    }
+  },
   computed: {
     data() {
       return {
-        indexCode: {
-          '1':
-            '<Box f=”1” dir=”row” justify=”center” align=”center” bg=”primary”>',
-          '2': '<Text size=”large” bold uppercase>nimble is awesome!</Text>',
-          '3': '</Box>',
-        },
-
         page: this.$page.frontmatter,
       }
     },
