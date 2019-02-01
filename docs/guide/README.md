@@ -2,8 +2,6 @@
 
 Get started quick with nimble-utils, the fast and easy way to style your components in React Native.
 
-## What is nimble-utils?
-
 ## Why use nimble-utils?
 
 nimble-utils is performant, elegant and extremely easy to use.
