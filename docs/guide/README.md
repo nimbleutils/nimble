@@ -39,7 +39,7 @@ const Post = () => (
 
 ## Underlying technologies
 
-Nimble-utils is build with the help of the following packages:
+Nimble-utils is built with the help of the following packages:
 
 - [React](https://reactjs.org/)
 - [React Native](https://facebook.github.io/react-native/)
