@@ -1,9 +1,8 @@
-import { ViewStyle, TextStyle } from 'react-native'
+import { ViewStyle, TextStyle, StyleSheet } from 'react-native'
 import { ITheme } from '../..'
 import { get } from 'lodash'
-import { elevationMap } from './maps/view'
 
-export const getViewUtiityStyles = (props: any) => {
+export const getViewUtiityStyles = (props: any, theme: ITheme) => {
   let styles: ViewStyle = {}
 
   if (props.center) {
@@ -11,10 +10,24 @@ export const getViewUtiityStyles = (props: any) => {
     styles.alignItems = 'center'
   }
 
-  if (elevationMap[props.elevation]) {
+  if (props.absoluteFill) {
     styles = {
       ...styles,
-      ...elevationMap[props.elevation],
+      ...StyleSheet.absoluteFillObject,
+    }
+  }
+
+  if (props.elevation && get(theme, `elevation.${props.elevation}`)) {
+    styles = {
+      ...styles,
+      ...theme.elevation[props.elevation],
+    }
+  }
+
+  if (props.class && theme.classes) {
+    styles = {
+      ...styles,
+      ...theme.classes[props.class],
     }
   }
 
@@ -24,13 +37,23 @@ export const getViewUtiityStyles = (props: any) => {
 export const getTextUtilityStyles = (props: any, theme: ITheme) => {
   let styles: TextStyle = {}
 
-  if (props.bold) styles.fontWeight = '700'
-
   const defaultFontSize = get(theme, 'text.size.default') || 12
   const defaultFontFamily = get(theme, 'text.family.default') || 'Arial'
+  const defaultColor = get(theme, 'text.color') || 'black'
 
+  if (!props.color) styles.color = defaultColor
   if (!props.size) styles.fontSize = defaultFontSize
   if (!props.family) styles.fontFamily = defaultFontFamily
+
+  if (props.bold) styles.fontWeight = '700'
+  if (props.thin) styles.fontWeight = '300'
+
+  if (props.class && theme.classes) {
+    styles = {
+      ...styles,
+      ...theme.classes[props.class],
+    }
+  }
 
   return styles
 }

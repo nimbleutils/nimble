@@ -2,26 +2,30 @@
 
 @import '/iota';
 @import '/typography';
+@import '/code';
+@import '/button';
 
 @import '/form';
 
 html {
-    min-width: 375px;
+  min-width: 375px;
 }
 
 body {
-    min-width: 375px;
+  width: 100%;
+  min-width: 375px;
+  max-width: 1920px;
 
-    font-size: 16px;
-    font-family: 'Raleway';
-    line-height: 1.5;
-    color: map-get($iota-global-colors, black);
+  font-size: 16px;
+  font-family: 'Raleway';
+  line-height: 1.5;
+  color: map-get($iota-global-colors, black);
 }
 
 a {
-    color: map-get($iota-global-colors, primary);
+  color: map-get($iota-global-colors, primary);
 
-    &:hover {
-        color: map-get($iota-global-colors, primary);
-    }
+  &:hover {
+    color: map-get($iota-global-colors, primary);
+  }
 }
