@@ -8,7 +8,7 @@ Get started quick with nimble-utils, the fast and easy way to style your compone
 
 nimble-utils is performant, elegant and extremely easy to use.
 
-Take a loof for yourself.
+Take a look for yourself.
 
 ```javascript
 /* Without nimble-utils */
