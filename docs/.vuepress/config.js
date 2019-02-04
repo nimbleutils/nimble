@@ -21,7 +21,7 @@ module.exports = {
   serviceWorker: true,
 
   markdown: {
-    // options for markdown-it-anchor
+    // options for markdown-it-anchor!
     anchor: {permalink: false},
     config: md => {
       md.use (require ('markdown-it-katex'));
