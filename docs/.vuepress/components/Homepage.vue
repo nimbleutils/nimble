@@ -42,19 +42,63 @@
       <img class="index__section-one-background" role="presentation" src="/section-one-curve.svg">
     </section>
 
-    <section class="index__section index__section-two"></section>
+    <section class="index__section index__section-two u-mt-5">
+      <div class="o-container">
+        <h3 class="u-mb-8 u-text-center">Examples</h3>
+
+        <Example
+          title="Box"
+          body="Quisque in eleifend leo, non maximus eros. Sed eu gravida mauris, ac fermentum libero. Aliquam feugiat aliquam orci."
+          :nimble="examples.box.nimble"
+          :native="examples.box.native"
+        />
+
+        <Example
+          class="u-mt-5"
+          title="Text"
+          body="Quisque in eleifend leo, non maximus eros. Sed eu gravida mauris, ac fermentum libero. Aliquam feugiat aliquam orci."
+          :nimble="examples.text.nimble"
+          :native="examples.text.native"
+        />
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
+import Example from './Example'
+
 export default {
+  components: {
+    Example,
+  },
+
   data() {
     return {
       hero: {
         yarn: `> yarn add nimble-utils`,
         code: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
-    <Text size=”large” bold uppercase>nimble is awesome!</Text>
-  </Box>`,
+  <Text size=”large” bold uppercase>nimble is awesome!</Text>
+</Box>`,
+      },
+      examples: {
+        box: {
+          nimble: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
+  <Text size=”large” bold uppercase>nimble is awesome!</Text>
+</Box>`,
+          native: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
+  <Text size=”large” bold uppercase>this is the example!</Text>
+</Box>`,
+        },
+
+        text: {
+          nimble: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
+  <Text size=”large” bold uppercase>nimble is awesome!</Text>
+</Box>`,
+          native: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
+  <Text size=”large” bold uppercase>this is the example!</Text>
+</Box>`,
+        },
       },
     }
   },
@@ -81,11 +125,11 @@ body {
 
     width: 100%;
     padding-top: 70px;
-    padding-bottom: 175px;
+    padding-bottom: 125px;
 
     background: linear-gradient(115.91deg, #9974e3 0.73%, #d56079 92.84%);
 
-    @include iota-breakpoint(lg) {
+    @include iota-breakpoint(sm) {
       padding-bottom: 175px;
     }
 
@@ -111,7 +155,7 @@ body {
       color: #fff;
 
       &-byline {
-        font-weight: 500;
+        font-weight: 600;
       }
     }
 
