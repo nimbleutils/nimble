@@ -8,15 +8,17 @@ export const ifDirective = (c: any, nIf: boolean) => {
 }
 
 export const clickDirective = (c: Component, nClick: any) => {
+  if (!nClick) return c
+
   if (isFunction(nClick)) {
-    return <TouchableOpacity onPress={() => nClick}>{c}</TouchableOpacity>
+    return <TouchableOpacity onPress={nClick}>{c}</TouchableOpacity>
   }
 
   if (Array.isArray(nClick) && nClick.length > 1) {
     return React.createElement(nClick[0], { onPress: nClick[1] }, c)
   }
 
-  return null
+  return c
 }
 
 export const renderWithDirectives = (
@@ -29,11 +31,7 @@ export const renderWithDirectives = (
   modifiedElement = ifDirective(modifiedElement, nIf)
   if (!modifiedElement) return modifiedElement
 
-  if (nClick) {
-    console.log(nClick)
-  }
-
-  Wrapp in click
+  // Wrapp in click
   modifiedElement = clickDirective(modifiedElement, nClick)
 
   return modifiedElement
