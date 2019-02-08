@@ -6,12 +6,20 @@
 .icon.outbound
   display none
 
-.sidebar-group-items > li > a {
-  font-size: 1.1em;
-  font-weight: bold;
-}
+.sidebar-group-items > li > a
+  font-size: 1.1em
+  font-weight: bold
 
-.navbar {
-  max-width: 1920px;
-  margin: auto;
-}
+.navbar
+  max-width: 1920px
+  margin: auto
+
+a.sidebar-link.active
+  color: #d55c76
+  border-left-color: #d55c76
+
+a.sidebar-link:hover
+  color: #d55c76
+
+.nav-item > a:not(.external):hover, .nav-item > a:not(.external).router-link-active
+  border-bottom: 2px solid #d55c76
