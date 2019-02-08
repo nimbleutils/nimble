@@ -1,11 +1,20 @@
 .code {
   padding: 20px;
 
-  background-color: #002240;
+  background-color: map-get($iota-global-colors, code-background);
   border-radius: 5px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: scroll;
 
   font-size: 0.8em;
+
+  @include iota-breakpoint(sm) {
+    overflow: visible;
+  }
+
+  &--example {
+    border-top-left-radius: 0;
+  }
 }
 
 .hljs {
