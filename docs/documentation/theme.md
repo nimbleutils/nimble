@@ -44,19 +44,11 @@ const theme = {
       },
     },
   },
+  classes: {
+    'heading-1': {
+      fontSize: 16,
+      color: 'dodgerblue',
+    },
+  },
 }
 ```
-
-### Props
-
-| Props     | Value                                                                   | Description     |
-| --------- | ----------------------------------------------------------------------- | --------------- |
-| colors    | number                                                                  | flex            |
-| spacing   | wrap, nowrap                                                            | flex wrap       |
-| flexBasis | number, string                                                          | flex basis      |
-| dir       | row, column, row-reverse, column-reverse                                | flex direction  |
-| grow      | number                                                                  | flex grow       |
-| shrink    | number                                                                  | flex shrink     |
-| justify   | flex-start, flex-end, center, space-between, space-around, space-evenly | justify content |
-| align     | flex-start, flex-end, center, stretch, baseline                         | align items     |
-| zIndex    | number                                                                  | z-index         |
