@@ -1,2 +1,29 @@
 .code {
+  padding: 20px;
+
+  background-color: #002240;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  font-size: 0.8em;
+}
+
+.hljs {
+  color: #d8d8d8;
+
+  &-tag {
+    line-height: 2em;
+  }
+
+  &-name {
+    color: #9effff;
+  }
+
+  &-attr {
+    color: #ff80e1;
+  }
+
+  &-string {
+    color: #3ad900;
+  }
 }
