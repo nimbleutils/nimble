@@ -14,12 +14,15 @@ export interface ITextProps extends IGeneralProps, TextProps {
   textAlign?: TextAlignType
   font?: string
   spacing?: number
-  family?: string
   o?: number
   /**
    * Utlity props
    */
   uppercase?: boolean
+  lowercase?: boolean
   capitalize?: boolean
   bold?: boolean
+  thin?: boolean
+  deco?: 'none' | 'underline' | 'line-through' | 'underline line-through'
+  class?: string
 }

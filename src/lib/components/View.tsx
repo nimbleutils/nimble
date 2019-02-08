@@ -8,6 +8,7 @@ import { generalPropToStylePropMap } from '../utils/maps/general'
 import { getViewUtiityStyles } from '../utils/getUtilityStyles'
 import getRegularStyles from '../utils/getRegularStyles'
 import { flattenStyle } from '../utils/flattenStyle'
+import { getFilteredViewProps } from '../utils/getFilteredProps'
 
 const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
   children,
@@ -20,7 +21,7 @@ const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
     ...generalPropToStylePropMap,
   ])
   const regularStyles = getRegularStyles(rest, propToStylePropMap, theme)
-  const utilityStyles = getViewUtiityStyles(rest)
+  const utilityStyles = getViewUtiityStyles(rest, theme)
   const appliedStyle = StyleSheet.create({
     style: {
       ...regularStyles,
@@ -30,7 +31,7 @@ const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
   })
 
   return (
-    <OView style={appliedStyle.style} {...rest}>
+    <OView style={appliedStyle.style} {...getFilteredViewProps(rest)}>
       {children}
     </OView>
   )

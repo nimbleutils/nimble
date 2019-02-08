@@ -7,7 +7,6 @@
 
 $iota-objs-container-namespace: 'container';
 
-
 /**
  * Allows you to specify the default set of padding
  * left and right of your container. You can use a
@@ -19,10 +18,9 @@ $iota-objs-container-namespace: 'container';
 
 // $iota-objs-container-gutter-default: $iota-global-gutter-default;
 $iota-objs-container-gutter-default: (
-    null: 10px,
-    md: 20px
+  null: 10px,
+  md: 20px,
 );
-
 
 /**
  * Allows you to specify more sets of padding left and
@@ -34,7 +32,6 @@ $iota-objs-container-gutter-default: (
 
 $iota-objs-container-gutter-extra: ();
 
-
 /**
  * Allows you to specify the default max-width of your
  * container. You can use a map in case you would like
@@ -43,8 +40,7 @@ $iota-objs-container-gutter-extra: ();
  * Type: String / Map
  */
 
-$iota-objs-container-size-default: 1100px;
-
+$iota-objs-container-size-default: 1200px;
 
 /**
  * Allows you to specify more sets of max-width for your
@@ -55,6 +51,5 @@ $iota-objs-container-size-default: 1100px;
  */
 
 $iota-objs-container-size-extra: $iota-global-colors;
-
 
 @import 'node_modules/iotacss/objects/container';
