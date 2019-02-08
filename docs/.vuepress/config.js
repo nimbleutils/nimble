@@ -39,6 +39,7 @@ function genSidebarConfig(title) {
         'getting-started',
         'components',
         'classes',
+        'directives',
         'theme',
         'about',
       ],
