@@ -13,10 +13,10 @@
 
           <div class="index__hero-text-button-group u-mt-3">
             <router-link
-              to="/guide/getting-started.html"
+              to="/documentation/getting-started.html"
               class="button button--primary"
             >Getting Started</router-link>
-            <router-link to="/guide/" class="button button--secondary u-ml-1">Documentation</router-link>
+            <router-link to="/documentation/" class="button button--secondary u-ml-1">Documentation</router-link>
           </div>
         </div>
 
