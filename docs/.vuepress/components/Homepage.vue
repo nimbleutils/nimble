@@ -62,6 +62,14 @@
         />
       </div>
     </section>
+
+    <footer class="footer u-mt-8 u-pv-2">
+      <div class="o-container u-flex u-jc-center">
+        <a href="https://github.com/goa-codebet/nimble" class="footer__github">
+          <img src="/github-mark.png">
+        </a>
+      </div>
+    </footer>
   </main>
 </template>
 
@@ -81,6 +89,7 @@ export default {
   <Text size=”large” bold uppercase>nimble is awesome!</Text>
 </Box>`,
       },
+
       examples: {
         box: {
           nimble: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
@@ -114,10 +123,6 @@ export default {
 
 <style lang="scss">
 @import './styles/main.scss';
-
-body {
-  padding-bottom: 400px;
-}
 
 .index {
   &__hero {
@@ -208,6 +213,24 @@ body {
       left: 0;
 
       width: 100%;
+    }
+  }
+}
+
+.footer {
+  background-color: #222222;
+
+  &__github {
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    img {
+      $size: 30px;
+      width: $size;
+      height: $size;
     }
   }
 }
