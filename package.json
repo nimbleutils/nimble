@@ -2,8 +2,8 @@
   "name": "nimble-utils",
   "devDependencies": {
     "@types/color": "^3.0.0",
-    "@types/react": "16.7.7",
-    "@types/react-native": "0.57.4",
+    "@types/react": "^16.7.7",
+    "@types/react-native": "^0.57.4",
     "@types/lodash": "^4",
     "iotacss": "^1.6.0",
     "markdown-it": "^8.4.1",
