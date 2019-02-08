@@ -3,7 +3,7 @@
     <section class="index__hero">
       <div class="o-container u-flex@lg">
         <div class="index__hero-text u-mr-2@lg">
-          <h1>React Native Nimble</h1>
+          <h1>Nimble-utils</h1>
           <h2
             class="h4 index__hero-text-byline"
           >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
