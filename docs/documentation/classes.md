@@ -1,4 +1,4 @@
-# Utility classes
+# Classes
 
 Utility classes enables you to create your own utilites to meet your own needs in your project.
 
