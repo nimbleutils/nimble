@@ -1,12 +1,4 @@
 export interface IGeneralDirectives {
   nIf?: boolean
-  nClick?: IClickDirectives
+  nPress?: Function
 }
-
-type touchables =
-  | 'TouchableHighlight'
-  | 'TouchableOpacity'
-  | 'TouchableNativeFeedback'
-  | 'TouchableWithoutFeedback'
-
-export type IClickDirectives = Function | [touchables, Function]

@@ -36,8 +36,7 @@ const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
       {children}
     </OView>
   )
-
-  return renderWithDirectives(element, rest)
+  return renderWithDirectives(element, rest, children)
 }
 
 export default NimbleConsumer<IViewProps>(View)

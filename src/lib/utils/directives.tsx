@@ -1,38 +1,34 @@
 import React, { Component } from 'react'
 import { isFunction } from 'lodash'
-import { TouchableOpacity } from 'react-native'
-import { IClickDirectives } from '../types/directives'
+import { TouchableOpacity, ViewProps } from 'react-native'
 
 export const ifDirective = (c: any, nIf: boolean) => {
   return nIf || typeof nIf === 'undefined' ? c : null
 }
 
-export const clickDirective = (c: Component, nClick: any) => {
-  if (!nClick) return c
-
-  if (isFunction(nClick)) {
-    return <TouchableOpacity onPress={nClick}>{c}</TouchableOpacity>
-  }
-
-  if (Array.isArray(nClick) && nClick.length > 1) {
-    return React.createElement(nClick[0], { onPress: nClick[1] }, c)
-  }
-
-  return c
+export const onPressDirective = (
+  c: Component<ViewProps>,
+  children,
+  nPress: any
+) => {
+  if (!nPress && isFunction(nPress)) return c
+  return React.createElement(
+    TouchableOpacity,
+    { onPress: nPress, style: c.props.style },
+    children
+  )
 }
 
 export const renderWithDirectives = (
   element,
-  { nIf, nClick }: { nIf?: boolean; nClick?: IClickDirectives }
+  { nIf, nPress }: { nIf?: boolean; nPress?: Function },
+  children = null
 ) => {
   let modifiedElement = element
 
-  // If directive
   modifiedElement = ifDirective(modifiedElement, nIf)
   if (!modifiedElement) return modifiedElement
 
-  // Wrapp in click
-  modifiedElement = clickDirective(modifiedElement, nClick)
-
+  modifiedElement = onPressDirective(modifiedElement, children, nPress)
   return modifiedElement
 }
