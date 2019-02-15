@@ -6,16 +6,17 @@
           <h1>React Native Nimble</h1>
           <h2
             class="h4 index__hero-text-byline"
-          >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-          <p
-            class="u-mt-2"
-          >Fusce dapibus ligula sit amet metus rutrum iaculis. Donec eu sapien ac ante convallis tincidunt vestibulum at eros. Ut id luctus mi, imperdiet aliquet risus. Nam eget commodo metus. Ut lacus dolor, malesuada.</p>
+          >A styling utility for rapid React Native development.</h2>
+          <p class="u-mt-2">
+            When our projects got bigger and bigger the styling got more and more out of hand. Let us present to you our solution:
+            <b>nimble-utils</b>
+          </p>
 
           <div class="index__hero-text-button-group u-mt-3">
             <router-link
               to="/documentation/getting-started.html"
               class="button button--primary"
-            >Getting Started</router-link>
+            >Getting started</router-link>
             <router-link to="/documentation/" class="button button--secondary u-ml-1">Documentation</router-link>
           </div>
         </div>
@@ -33,10 +34,19 @@
       <div class="index__section-one-inner o-container u-text-center">
         <h3 class="u-mb-1">Why Nimble Utils?</h3>
         <p>
-          <b>Prop styling</b> is in hac habitasse platea dictumst. Sed accumsan, neque quis ultrices fermentum, purus est cursus ex, eget convallis ipsum ipsum et dui.
-          <b>Directives</b> is mollis augue vel fermentum ultricies. Mauris tincidunt eu nunc id bibendum. Pellentesque sit amet cursus odio. Nam malesuada suscipit arcu nec auctor.
-          <b>Theming</b> is fusce finibus est orci, nec posuere ante iaculis sit amet. Sed ac condimentum elit. Aliquam et egestas justo. Cras leo dolor, feugiat in dolor in, rhoncus.
+          <b>Prop styling</b> offers you a cleaner & more maintainable way to write styling in React Native. Instead of constantly creating stylesheets you pass props directly to your elements.
+          In conjunction with prop styling,
+          <b>theming</b> provides you an easy way to declare global styles in a separate theming file. Example of theme settings are:
+          <i>colors</i>,
+          <i>font sizes</i> &
+          <i>default margins</i>.
+          To clean up your code even more, nimble-utils offers
+          <b>directives</b>, such as
+          <i>nClick</i> &
+          <i>nIf</i>.
         </p>
+
+        <router-link to="/documentation/" class="button button--primary u-mt-3">Read more</router-link>
       </div>
 
       <img class="index__section-one-background" role="presentation" src="/section-one-curve.svg">
@@ -47,8 +57,8 @@
         <h3 class="u-mb-8 u-text-center">Examples</h3>
 
         <Example
-          title="Box"
-          body="Quisque in eleifend leo, non maximus eros. Sed eu gravida mauris, ac fermentum libero. Aliquam feugiat aliquam orci."
+          title="View"
+          body="An extended View component which allows you to use prop styling & directives. This component replaces the View component of React Native."
           :nimble="examples.box.nimble"
           :native="examples.box.native"
         />
@@ -56,7 +66,7 @@
         <Example
           class="u-mt-5"
           title="Text"
-          body="Quisque in eleifend leo, non maximus eros. Sed eu gravida mauris, ac fermentum libero. Aliquam feugiat aliquam orci."
+          body="An extended Text component which allows you to use prop styling & directives. This component replaces the Text component of React Native."
           :nimble="examples.text.nimble"
           :native="examples.text.native"
         />
@@ -85,28 +95,46 @@ export default {
     return {
       hero: {
         yarn: `> yarn add nimble-utils`,
-        code: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
+        code: `<View f={1} dir=”row” center bg=”primary”>
   <Text size=”large” bold uppercase>nimble is awesome!</Text>
-</Box>`,
+</View>`,
       },
 
       examples: {
         box: {
-          nimble: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
-  <Text size=”large” bold uppercase>nimble is awesome!</Text>
-</Box>`,
-          native: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
-  <Text size=”large” bold uppercase>this is the example!</Text>
-</Box>`,
+          nimble: `<View nPress={() => {}} f={1} mt={10} p={10} center bg="primary">
+  ...
+</View>`,
+          native: `const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    marginTop: 10,
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#a1a1a1'
+  }
+})
+
+<TouchableOpacity onPress={() => {}} style={styles.wrapper}>
+  ...
+</TouchableOpacity>`,
         },
 
         text: {
-          nimble: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
-  <Text size=”large” bold uppercase>nimble is awesome!</Text>
-</Box>`,
-          native: `<Box f={1} dir=”row” justify=”center” align=”center” bg=”primary”>
-  <Text size=”large” bold uppercase>this is the example!</Text>
-</Box>`,
+          nimble: `<Text color="primary-text" center deco="underline" bold uppercase>
+  Nimble is awesome!
+</Text>`,
+          native: `const styles = StyleSheet.create({
+  text: {
+    color: '#ececec',
+    textAlign: 'center',
+    textDecorationLine: 'underline',
+    fontWeight: 'bold',
+  }
+})
+
+<Text>{'Nimble is awesome!'.toUpperCase()}</Text>`,
         },
       },
     }
