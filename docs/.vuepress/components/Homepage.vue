@@ -200,7 +200,7 @@ export default {
       right: 0;
       bottom: -2px;
       left: 0;
-
+      user-select: none;
       width: 100%;
 
       // transform: translateY(100%);
@@ -239,7 +239,7 @@ export default {
       right: 0;
       bottom: 0;
       left: 0;
-
+      user-select: none;
       width: 100%;
     }
   }
