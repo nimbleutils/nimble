@@ -11,7 +11,8 @@ export const onPressDirective = (
   children,
   nPress: any
 ) => {
-  if (!nPress && isFunction(nPress)) return c
+  if (!isFunction(nPress)) return c
+
   return React.createElement(
     TouchableOpacity,
     { onPress: nPress, style: c.props.style },
