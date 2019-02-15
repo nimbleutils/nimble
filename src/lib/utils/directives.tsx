@@ -13,11 +13,17 @@ export const onPressDirective = (
 ) => {
   if (!isFunction(nPress)) return c
 
-  return React.createElement(
-    TouchableOpacity,
-    { onPress: nPress, style: c.props.style },
-    children
-  )
+  // View
+  if (children) {
+    return React.createElement(
+      TouchableOpacity,
+      { onPress: nPress, style: c.props.style },
+      children
+    )
+  }
+
+  // Text
+  return <TouchableOpacity onPress={nPress}>{c}</TouchableOpacity>
 }
 
 export const renderWithDirectives = (
