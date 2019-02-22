@@ -16,12 +16,17 @@ module.exports = {
       '/documentation/': genSidebarConfig ('Documentation'),
     },
     lastUpdated: 'Last Updated',
+
     repo: 'goa-codebet/nimble',
     repoLabel: 'Contribute!',
     docsDir: 'docs',
     docsBranch: 'develop',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
+
+    serviceWorker: {
+      updatePopup: true,
+    },
   },
 
   ga: 'UA-135043232-1',
