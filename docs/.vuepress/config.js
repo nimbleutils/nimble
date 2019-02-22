@@ -16,6 +16,9 @@ module.exports = {
       '/documentation/': genSidebarConfig ('Documentation'),
     },
     lastUpdated: 'Last Updated',
+    serviceWorker: {
+      updatePopup: true,
+    },
   },
 
   ga: 'UA-135043232-1',
