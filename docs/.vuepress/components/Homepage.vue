@@ -201,6 +201,7 @@ export default {
       bottom: -2px;
       left: 0;
       user-select: none;
+      pointer-events: none;
       width: 100%;
 
       // transform: translateY(100%);
@@ -240,6 +241,7 @@ export default {
       bottom: 0;
       left: 0;
       user-select: none;
+      pointer-events: none;
       width: 100%;
     }
   }
