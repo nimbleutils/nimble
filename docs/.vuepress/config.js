@@ -18,6 +18,8 @@ module.exports = {
     lastUpdated: 'Last Updated',
   },
 
+  ga: 'UA-135043232-1',
+
   serviceWorker: true,
 
   markdown: {
