@@ -12,7 +12,7 @@ Utility props are typically a set of rules. For example `bold`, `uppercase` & `c
 
 ## Props
 
-### General props (available on both View & Text component)
+### General props (available on both View & Text)
 
 | Props | Value          | Description                              | Type    |
 | ----- | -------------- | ---------------------------------------- | ------- |
