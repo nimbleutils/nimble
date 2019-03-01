@@ -1,5 +1,6 @@
 import { IGeneralProps } from './general'
 import { ViewProps } from 'react-native'
+import { IGeneralDirectives } from './directives'
 
 type IFlexDirectionProp = 'row' | 'column' | 'row-reverse' | 'column-reverse'
 
@@ -20,7 +21,10 @@ type IFlexAlignItemsProp =
 
 type IFlexWrapProp = 'wrap' | 'nowrap'
 
-export interface IViewProps extends IGeneralProps, ViewProps {
+export interface IViewProps
+  extends IGeneralProps,
+    ViewProps,
+    IGeneralDirectives {
   /**
    * Style props
    */
