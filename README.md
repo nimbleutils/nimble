@@ -12,6 +12,6 @@
 
 ## License
 
-Copyright © 2018, Fing
+Copyright © 2019, Codebet
 
 Released under the [MIT License](https://opensource.org/licenses/MIT).
