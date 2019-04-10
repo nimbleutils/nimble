@@ -54,8 +54,8 @@ Utility props are typically a set of rules. For example `bold`, `uppercase` & `c
 | bottom    | number                                                                  | bottom           | Style   |
 | top       | number                                                                  | top              | Style   |
 | radius    | number, string                                                          | border radius    | Utility |
-| center    | boolean                                                                 | margin           | Utility |
-| elevation | number                                                                  | marginTop        | Utility |
+| center    | boolean                                                                 | center           | Utility |
+| elevation | number                                                                  | box shadow       | Utility |
 
 ### Text props
 
