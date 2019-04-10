@@ -1,9 +1,41 @@
+import React, { Component } from 'react'
+import { isFunction } from 'lodash'
+import { TouchableOpacity, ViewProps } from 'react-native'
+
 export const ifDirective = (c: any, nIf: boolean) => {
   return nIf || typeof nIf === 'undefined' ? c : null
 }
 
-export const renderWithDirectives = (element, { nIf }: { nIf?: boolean }) => {
+export const onPressDirective = (
+  c: Component<ViewProps>,
+  children,
+  nPress: any
+) => {
+  if (!isFunction(nPress)) return c
+
+  // View
+  if (children) {
+    return React.createElement(
+      TouchableOpacity,
+      { onPress: nPress, style: c.props.style },
+      children
+    )
+  }
+
+  // Text
+  return <TouchableOpacity onPress={nPress}>{c}</TouchableOpacity>
+}
+
+export const renderWithDirectives = (
+  element,
+  { nIf, nPress }: { nIf?: boolean; nPress?: Function },
+  children = null
+) => {
   let modifiedElement = element
+
   modifiedElement = ifDirective(modifiedElement, nIf)
+  if (!modifiedElement) return modifiedElement
+
+  modifiedElement = onPressDirective(modifiedElement, children, nPress)
   return modifiedElement
 }

@@ -8,6 +8,7 @@ import { generalPropToStylePropMap } from '../utils/maps/general'
 import { getViewUtiityStyles } from '../utils/getUtilityStyles'
 import getRegularStyles from '../utils/getRegularStyles'
 import { flattenStyle } from '../utils/flattenStyle'
+import { getFilteredViewProps } from '../utils/getFilteredProps'
 import { renderWithDirectives } from '../utils/directives'
 
 const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
@@ -31,12 +32,11 @@ const View: React.FunctionComponent<IViewProps & IConsumerInjectedProps> = ({
   })
 
   const element = (
-    <OView style={appliedStyle.style} {...rest}>
+    <OView style={appliedStyle.style} {...getFilteredViewProps(rest)}>
       {children}
     </OView>
   )
-
-  return renderWithDirectives(element, rest)
+  return renderWithDirectives(element, rest, children)
 }
 
 export default NimbleConsumer<IViewProps>(View)
