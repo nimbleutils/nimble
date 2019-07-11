@@ -1272,6 +1272,13 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/react@16.7.7":
+  version "16.7.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.7.tgz#1e5e23e7dd922968ed4b484cdec00a5402c9f31b"
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
 "@vue/babel-preset-app@3.0.0-beta.11":
   version "3.0.0-beta.11"
   resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.0.0-beta.11.tgz#c8b889aa73464050f9cd3f9dc621951d85c24508"
@@ -1298,10 +1305,6 @@
     prettier "1.16.3"
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.8.2"
-
-"@vuepress/plugin-google-analytics@^1.0.0-alpha.0":
-  version "1.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.0.0-alpha.0.tgz#97acb3a512dca9b2b6e4014fa2d58da38e2a01b9"
 
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
@@ -5514,8 +5517,8 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
 lodash.mergewith@^4.6.0:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
 
 lodash.pad@^4.1.0:
   version "4.5.1"
