@@ -6,7 +6,7 @@
     "@types/react-native": "0.57.4",
     "@types/lodash": "^4",
     "iotacss": "^1.6.0",
-    "markdown-it": "^8.4.1",
+    "markdown-it": "^12.3.2",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-katex": "^2.0.3",
     "node-sass": "^4.11.0",
